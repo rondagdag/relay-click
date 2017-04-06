@@ -1,0 +1,21 @@
+{
+  "name": "relay-click",
+  "version": "0.0.1",
+  "description": "create repository for ble controlled relay click board\r </br>\r You can view the project video and tutorial at:",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rondagdag/relay-click.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rondagdag/relay-click/issues"
+  },
+  "homepage": "https://github.com/rondagdag/relay-click#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
