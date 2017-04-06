@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "create repository for ble controlled relay click board\r </br>\r You can view the project video and tutorial at:",
   "scripts": {
-    "start": "http-server"
+    "start": "http-server ./public"
   },
   "repository": {
     "type": "git",
