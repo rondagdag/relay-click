@@ -16,12 +16,35 @@
         this._characteristics = new Map();
     }
 
+    // connect(){
+    //     return navigator.bluetooth.requestDevice({
+    //      filters: [{
+    //       services:[this.serviceUUID]
+    //      }]
+    //     })
+    //     .then(device => {
+    //         this.device = device;
+    //         return device.gatt.connect();
+    //     })
+    //     .then(server => {
+    //         this.server = server;
+    //         return Promise.all([
+    //           server.getPrimaryService(this.serviceUUID)
+    //           .then(service=>{
+    //             return Promise.all([
+    //               this._cacheCharacteristic(service, this.characteristic1UUID),
+    //               // this._cacheCharacteristic(service, 'uuidCharacteristic2Here'),
+    //             ])
+    //           })
+    //         ]);
+    //     })
+    // }
     connect(){
         return navigator.bluetooth.requestDevice({
-         filters: [{
-          services:[this.serviceUUID]
-         }]
-        })
+          filters: [{
+           services:[this.serviceUUID]
+          }]
+         })
         .then(device => {
             this.device = device;
             return device.gatt.connect();
