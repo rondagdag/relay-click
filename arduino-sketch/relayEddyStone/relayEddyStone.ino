@@ -156,6 +156,10 @@ void setup()
     return; // don't start advertising if the URL won't work.
   }
 
+  blePeripheral.setAdvertisedServiceUuid(eddyService.uuid());
+  blePeripheral.setAdvertisedServiceData(eddyService.uuid(), urlFrame, urlFrameLength);
+ 
+
   blePeripheral.setDeviceName("relays");
   blePeripheral.setAdvertisedServiceUuid(relayService.uuid());
   blePeripheral.addAttribute(relayService);
@@ -167,8 +171,6 @@ void setup()
   relayCharacteristic.setEventHandler(BLEWritten, relayCharacteristicWritten);
 
 
-  blePeripheral.setAdvertisedServiceUuid(eddyService.uuid());
-  blePeripheral.setAdvertisedServiceData(eddyService.uuid(), urlFrame, urlFrameLength);
  
   // All BLE characteristics should be initialized to a starting value prior
   // using them.
